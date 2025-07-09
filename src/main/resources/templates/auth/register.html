@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{page_layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link th:href="@{/css/auth.css}" rel="stylesheet">
+</head>
+<body>
+<div layout:fragment="main-content">
+
+    <!-- Error Message -->
+    <div th:if="${param.error}" class="alert alert-danger">
+        Username already exists.
+    </div>
+
+    <!-- Registration Form -->
+    <form class="form" th:action="@{/register}" method="post" th:object="${user}">
+        <!-- Username -->
+        <div class="flex-column">
+            <label>Username</label>
+            <input th:field="*{username}" class="input" type="text" placeholder="Enter your Username" />
+        </div>
+
+        <!-- Email -->
+        <div class="flex-column">
+            <label>Email</label>
+            <input th:field="*{email}" class="input" type="email" placeholder="Enter your Email" />
+        </div>
+
+        <!-- Password -->
+        <div class="flex-column">
+            <label>Password</label>
+            <input th:field="*{password}" class="input" type="password" placeholder="Enter your Password" />
+        </div>
+
+        <!-- 2FA Checkbox -->
+        <div class="flex-column">
+            <label for="twofa">Enable 2FA</label>
+            <input th:field="*{twoFactorEnabled}" id="twofa" type="checkbox" />
+        </div>
+
+        <button class="button-submit" type="submit">Sign Up</button>
+    </form>
+    </div>
+</div>
+</body>
+</html>

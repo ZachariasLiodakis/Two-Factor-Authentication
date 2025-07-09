@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<header class="masthead mb-auto" th:fragment="header">
+    <div class="inner">
+        <h3 class="masthead-brand">2FA</h3>
+        <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="/" sec:authorize="!isAuthenticated()">Home</a>
+            <a class="nav-link" href="/login" sec:authorize="!isAuthenticated()">Login</a>
+            <a class="nav-link" href="/register" sec:authorize="!isAuthenticated()">Register</a>
+
+            <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                <a class="nav-link" href="/" sec:authorize="isAuthenticated()">Home</a>
+                <input type="submit" class="btn btn-primary" value="Sign Out"/>
+            </form>
+        </nav>
+    </div>
+</header>
+
+</body>
+</html>

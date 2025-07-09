@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<footer class="mastfoot mt-auto" th:fragment="header">
+    <div class="inner">
+        <div sec:authorize="isAuthenticated()">
+            Authenticated email:
+            <span sec:authentication="name"></span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
