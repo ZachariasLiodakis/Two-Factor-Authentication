@@ -6,7 +6,7 @@
       <img src="Images/2FAsim.png" alt="2FA" height="150" />
     </td>
     <td style="vertical-align: middle;">
-      <h2 style="font-size: 0em; margin: 0;">Two Factor Authentication</h2>
+      <h2 style="font-size: 0em; margin: 0;">Two Factor Authenticator</h2>
     </td>
   </tr>
 </table>
