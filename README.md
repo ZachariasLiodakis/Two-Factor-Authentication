@@ -1,5 +1,18 @@
-![Daily Task Manager](src/main/resources/static/images/2FA.png)
-# 2FASim - Two-Factor Authentication Sample Application
+<div align="center">
+
+<table>
+  <tr>
+    <td>
+      <img src="images/Password Vault.png" alt="2FA" height="150" />
+    </td>
+    <td style="vertical-align: middle;">
+      <h2 style="font-size: 0em; margin: 0;">Two Factor Authentication</h2>
+    </td>
+  </tr>
+</table>
+
+</div>
+#
 
 ## Overview
 
